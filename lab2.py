@@ -1,9 +1,10 @@
 from PIL import Image, ImageDraw
 
-with open('C:\compGraphics\compGraphLab2\DS4.txt', 'r') as file:  # в першому аргументі потрібно змінити шлях, на відповідний шлях до файлу DS4.txt
-    image = Image.new("RGBA", (960, 540), 'white')    
+image = Image.new("RGBA", (960, 540), 'white')    
 
-    draw = ImageDraw.Draw(image)
+draw = ImageDraw.Draw(image)
+
+with open('C:\compGraphics\compGraphLab2\DS4.txt', 'r') as file:  # в першому аргументі потрібно змінити шлях, на відповідний шлях до файлу DS4.txt
 
     for line in file:
         coordinatesTuple = (int(line[0:3]), int(line[4:7]))
